@@ -31,7 +31,7 @@ Expected Output:
 
 */ 
  
-let phoneReg = /write your regex here/
+let phoneReg = /\d+-\d+-\d+/g
 
 /* 
 
@@ -51,13 +51,14 @@ Expected Output:
 
 */ 
 
-let emailReg = /write your regex here/
+let emailReg = /[a-z]+@[a-z]+.com/g
 
 /* 
 
 Regular Expression 3: 
 - Format to match: "Status:"
-- Planned usage: Will be used to find where the status of the application is located in the string. Be sure to make the regex insensitive to casing as some applicants like to type in all caps or all lowercase. 
+- Planned usage: Will be used to find where the status of the application is located in the string. 
+Be sure to make the regex insensitive to casing as some applicants like to type in all caps or all lowercase. 
 
 - Hints for regex: What modifier allows casing to be ignored?
 - Hint for testing: What JavaScript method returns the first index where the match is located? 
@@ -67,4 +68,6 @@ Expected Output:
 
 */ 
 
-let statusReg = /write your regex here/
+let statusReg = /status/i
+let find = sampleApp.search(statusReg)
+console.log(find)
